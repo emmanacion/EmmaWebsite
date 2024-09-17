@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PDF.js Viewer with Multiple Files</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 20px;
+      }
+      canvas {
+         border: 1px solid #000;
+         margin-top: 10px;
+      }
+      #controls {
+         margin-bottom: 10px;
+      }
+   </style>
+</head>
+<body>
+   <h1>PDF.js Viewer with Multiple PDF Files</h1>
+
+   <div id="controls">
+      <label for="pdfSelector">Select a PDF: </label>
+      <select id="pdfSelector">
+         <option value="pdf1.pdf">PDF 1</option>
+         <option value="pdf2.pdf">PDF 2</option>
+         <option value="pdf3.pdf">PDF 3</option>
+      </select>
+   </div>
+
+   <canvas id="pdfCanvas"></canvas>
+
+   <script>
+      // Replace these paths with the actual paths to your PDF files
+      const urlList = {
+         'pdf1.pdf': 'files/path_to_pdf1.pdf',
+         'pdf2.pdf': 'files/path_to_pdf2.pdf',
+         'pdf3.pdf': 'files/path_to_pdf3.pdf'
+      };
+
+      let pdfDoc = null;
+      let pageNum = 1;
+      const canvas = document.getElementById('pdfCanvas');
+      const ctx = canvas.getContext('2d');
+
+      // Function to render a page of the PDF
+      function renderPage(num) {
+         pdfDoc.getPage(num).then(function(page) {
+            const viewport = page.getViewport({ scale: 1.5 });
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            const renderContext = {
+               canvasContext: ctx,
+               viewport: viewport
+            };
+            page.render(renderContext);
+         });
+      }
+
+      // Function to load the PDF file
+      function loadPDF(pdfUrl) {
+         pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+            pdfDoc = pdf;
+            renderPage(pageNum);
+         });
+      }
+
+      // Event listener for the PDF selector
+      document.getElementById('pdfSelector').addEventListener('change', function() {
+         const selectedFile = this.value;
+         loadPDF(urlList[selectedFile]);
+      });
+
+      // Load the first PDF when the page is loaded
+      window.onload = function() {
+         loadPDF(urlList['pdf1.pdf']);
+      };
+   </script>
+</body>
+</html>
