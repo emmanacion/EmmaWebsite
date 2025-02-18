@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        myturq: "#297e6d"
+                    },
+                    fontFamily: {
+                        scheherazade: ["Scheherazade New", "serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 flex items-center justify-center h-screen">
+    <div class="container mx-auto flex items-center justify-center h-screen">
+        <!-- Left Side: Portfolio Title -->
+        <div class="flex-initial flex m-8 items-center">
+            <h1 class="text-9xl font-bold text-purple-500">Emma 
+                                                            <br>Baizabal</h1>
+        </div>
+        <!-- Right Side: Boxes -->
+        <div class="flex-initial m-8 grid grid-cols-2 gap-2">
+            <!-- Achievements -->
+             <!-- The sizes work as default / sligthely larger / largest  -->
+            <a href="publicaciones.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors" style="background-image: url('files/brick-bkcgrnd.jpg');">
+                <h2 class="text-7xl font-semibold text-purple-600">ES<br>CRI<br>TOS</h2>
+            </a>
+            <!-- Projects -->
+            <a href="semblanza.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-purple-100 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors" style="background-image: url('files/fuego-bckgrnd.jpg');">
+                <h2 class="text-7xl font-semibold text-purple-600">SEM<br>BLAN<br>ZA</h2>
+            </a>
+            <!-- CV -->
+            <a href="charlas.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-purple-100 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors" style="background-image: url('files/city-bckgrnd.jpg');">
+                <h2 class="text-7xl font-semibold text-purple-600">CHAR<br>LAS</h2>
+            </a>
+            <!-- PDFs -->
+            <a href="tarot.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-purple-100 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors" style="background-image: url('files/start-bckgrnd.jpg');">
+                <h2 class="text-7xl font-semibold text-purple-600">TA<br>ROT</h2>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

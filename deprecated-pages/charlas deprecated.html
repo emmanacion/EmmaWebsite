@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Charlas</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moreno: "#c09960",
+                        crema: "#f0c899",
+                        myturq: "#297e6d",
+                        lowturq: "#62a8a1",
+                        khaki: "#d4c2ac",
+
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+   
+   <!-- Sidebar Navigation -->
+   <nav class="fixed top-0 left-0 h-screen w-15 bg-purple-600 text-white p-2">
+      <ul class="space-y-3" style="font-size: 1.5rem">
+         <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
+         <li><a href="semblanza.html" class="hover:text-purple-300">Semblanza</a></li>
+         <li><a href="charlas.html" class="hover:text-purple-300">Charlas</a></li>
+         <li><a href="publicaciones.html" class="hover:text-purple-300">Publicaciones</a></li>
+         <li><a href="tarot.html" class="hover:text-purple-300">Tarot</a></li>
+      </ul>
+   </nav>
+   
+   <!-- Main Content -->
+   <div class="flex-grow p-4 ml-40">
+      <div class="w-full flex flex-col items-start space-y-4">
+         
+         <!-- Section 2 -->
+         <div class="flex justify-between w-full space-x-4">
+               <img src="files\plural charla.jpeg" alt="Image Description" class="w-full h-auto object-contain" />
+               <img src="files\IAPh 2021.png" alt="Image Description" class="w-full h-auto object-contain" />
+         </div>
+
+         <div class="flex justify-between w-full space-x-4">
+            <img src="files\CICITEGE.png" alt="Image Description" class="w-full h-auto object-contain" />
+            <img src="files\Programa_PensamientoLatinoamericanoTecnica.jpeg" alt="Image Description" class="w-full h-auto object-contain" />
+      </div>
+
+      </div>
+   </div>
+
+</body>
+</html>

@@ -4,31 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moreno: "#c09960",
+                        crema: "#f0c899",
+                        myturq: "#297e6d",
+                        lowturq: "#62a8a1",
+                        khaki: "#d4c2ac",
+
+                    },
+                    fontFamily: {
+                        scheherazade: ["Scheherazade New", "serif"],
+                        unna: ["Unna", "serif"],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-white text-gray-800">
-    <div class="container mx-auto px-4 py-20 flex">
+<body class="bg-crema text-gray-800 flex items-center justify-center h-screen">
+    <div class="container mx-auto flex items-center justify-center h-screen">
         <!-- Left Side: Portfolio Title -->
-        <div class="flex-1 flex items-center">
-            <h1 class="text-4xl font-bold text-purple-500">My Portfolio</h1>
+        <div class="flex-initial flex m-8 items-center">
+            <h1 class="text-9xl font-scheherazade text-myturq">Emma 
+                                                            <br>Baizabal</h1>
         </div>
         <!-- Right Side: Boxes -->
-        <div class="flex-1 grid grid-cols-2 gap-2">
+        <div class="flex-initial m-8 grid grid-cols-2 gap-2">
             <!-- Achievements -->
-            <a href="achievements.html" class="w-full h-64 bg-purple-100 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors">
-                <h2 class="text-2xl font-semibold text-purple-600">Achievements</h2>
-            </a>
+             <!-- The sizes work as default / sligthely larger / largest  -->
+            <a href="semblanza.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 flex items-center justify-center rounded-lg shadow-lg bg-lowturq">
+                <h2 class="text-7xl font-semibold text-khaki hover:text-crema">SEM<br>BLAN<br>ZA</h2>
             <!-- Projects -->
-            <a href="projects.html" class="w-full h-64 bg-purple-100 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors">
-                <h2 class="text-2xl font-semibold text-purple-600">Projects</h2>
+            <a href="escritos.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 flex items-center justify-center rounded-lg shadow-lg bg-myturq">
+                <h2 class="text-7xl font-semibold text-khaki hover:text-crema">ES<br>CRI<br>TOS</h2>
             </a>
             <!-- CV -->
-            <a href="cv.html" class="w-full h-64 bg-purple-100 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors">
-                <h2 class="text-2xl font-semibold text-purple-600">CV</h2>
+            <a href="charlas.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 flex items-center justify-center rounded-lg shadow-lg bg-moreno">
+                <h2 class="text-7xl font-semibold text-myturq hover:text-crema">CHAR<br>LAS</h2>
             </a>
             <!-- PDFs -->
-            <a href="pdfs.html" class="w-full h-64 bg-purple-100 flex items-center justify-center rounded-lg shadow-lg hover:bg-purple-200 transition-colors">
-                <h2 class="text-2xl font-semibold text-purple-600">PDFs</h2>
+            <a href="tarot.html" class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 flex items-center justify-center rounded-lg shadow-lg bg-khaki">
+                <h2 class="text-7xl font-semibold text-myturq hover:text-crema">TA<br>ROT</h2>
             </a>
         </div>
     </div>

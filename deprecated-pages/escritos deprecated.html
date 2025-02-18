@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Escritos</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moreno: "#c09960",
+                        crema: "#f0c899",
+                        myturq: "#297e6d",
+                        lowturq: "#62a8a1",
+                        khaki: "#d4c2ac",
+
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+   
+   <!-- Sidebar Navigation -->
+   <nav class="fixed top-0 left-0 h-screen w-15 bg-purple-600 text-white p-2">
+      <ul class="space-y-3" style="font-size: 1.5rem">
+         <li><a href="index.html" class="hover:text-purple-300">Home</a></li>
+         <li><a href="semblanza.html" class="hover:text-purple-300">Semblanza</a></li>
+         <li><a href="charlas.html" class="hover:text-purple-300">Charlas</a></li>
+         <li><a href="escritos.html" class="hover:text-purple-300">Publicaciones</a></li>
+         <li><a href="tarot.html" class="hover:text-purple-300">Tarot</a></li>
+      </ul>
+   </nav>
+   
+   <!-- Main Content -->
+   <div class="flex-grow p-4 ml-40">
+      <div class="w-full flex flex-col items-start space-y-10">
+         
+         <!-- Section 1 -->
+         <div class="flex justify-between w-full">
+            <div class="w-2/3 bg-white p-4 shadow-lg rounded-lg">
+               <div class="relative pb-[70%]">
+                  <object data="files/path_to_pdf1.pdf" type="application/pdf" class="absolute top-0 left-0 w-full h-full">
+                     <p>Your browser does not support PDFs. <a href="Resources/pics/[FINAL DRAFT] EYGOP Case Study (2).pdf">Download the PDF</a>.</p>
+                  </object>
+               </div>
+            </div>
+            <div class="w-1/3 pl-6">
+               <h3 class="text-sm font-semibold text-purple-600" style='font-size: 2rem'>Description 1</h3>
+               <br>
+               <p class="text-gray-700 mt-2" style="font-size: 1rem">This PDF provides a case study on EYGOP, discussing its final draft, objectives, and outcomes. It includes comprehensive data analysis and stakeholder insights.</p>
+            </div>
+         </div>
+
+         <!-- Section 2 -->
+         <div class="flex justify-between w-full">
+            <div class="w-2/3 bg-white p-4 shadow-lg rounded-lg">
+               <div class="relative pb-[70%]">
+                  <object data="files/path_to_pdf2.pdf" type="application/pdf" class="absolute top-0 left-0 w-full h-full">
+                     <p>Your browser does not support PDFs. <a href="Resources/pics/sample2.pdf">Download the PDF</a>.</p>
+                  </object>
+               </div>
+            </div>
+            <div class="w-1/3 pl-6">
+               <h3 class="text-sm font-semibold text-purple-600" style='font-size: 2rem'>Description 2</h3>
+               <br>
+               <p class="text-gray-700 mt-2" style="font-size: 1rem">This PDF highlights research findings on sustainability practices within corporations, providing an in-depth look at corporate responsibility strategies.</p>
+            </div>
+         </div>
+
+         <!-- Section 3 -->
+         <div class="flex justify-between w-full">
+            <div class="w-2/3 bg-white p-4 shadow-lg rounded-lg">
+               <div class="relative pb-[70%]">
+                  <object data="files/path_to_pdf3.pdf" type="application/pdf" class="absolute top-0 left-0 w-full h-full">
+                     <p>Your browser does not support PDFs. <a href="Resources/pics/sample3.pdf">Download the PDF</a>.</p>
+                  </object>
+               </div>
+            </div>
+            <div class="w-1/3 pl-6">
+               <h3 class="text-sm font-semibold text-purple-600" style='font-size: 2rem'>Description 3</h3>
+               <br>
+               <p class="text-gray-700 mt-2" style="font-size: 1rem">This PDF discusses innovations in technology with a focus on artificial intelligence and its implications for various industries worldwide.</p>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+</body>
+</html>
